@@ -1,2 +1,4 @@
+.vscode/
 .DS_Store
 *.js.map
+src/disjoint_set/*.js

@@ -26,7 +26,7 @@ class Node {
 }
 
 class DisjointSet {
-    map: Map<number, Node> = new Map();
+    private map: Map<number, Node> = new Map();
 
     // Create a set with only one element
     public makeSet(data: number): void {
@@ -65,7 +65,7 @@ class DisjointSet {
             parent1.rank = (rank1 === rank2) ? rank1 + 1 : rank1
             parent2.parent = parent1
         } else {
-            parent2.parent = parent2
+            parent1.parent = parent2
         }
 
         return true
@@ -87,6 +87,7 @@ class DisjointSet {
         if (parent == node) {
             return parent;
         }
+        // path compression
         node.parent = this.findSetByNode(parent)
         return node.parent
     }
