@@ -1,5 +1,5 @@
-var Node = require("./node.js");
-var colors = require('colors');
+const Node = require("./node.js");
+require('colors');
 
 module.exports = class LinkedList {
     constructor() {
