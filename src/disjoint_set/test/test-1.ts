@@ -1,4 +1,4 @@
-import DisjointSet from './disjoint_set'
+import DisjointSet from '../disjoint_set'
 import { strict as assert } from 'assert';
 import * as colors from 'colors'
 
