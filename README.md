@@ -9,6 +9,7 @@ Currently supports:
 - Max Heap
 - Min Heap
 - Priority Queue
+- Disjoint Set
 
 # Installation
 ```sh
@@ -49,3 +50,13 @@ npm i --save ds-js-x
 + let queue = new DS.PriorityQueue(comparator);
 + queue.help();
 ```
+
+# Development
+
+- `src` folder contains the implementation details
+    - `npm run build` to produce build/ folder
+    - `npm run test` to run all testcases
+- `build` folder contains the version to be published
+- `test` folder contains integration testing code
+    - Download the latest version of ds-js-x
+    - Use this package as if you are the actual user
