@@ -6,7 +6,8 @@
         "build": "./build.sh",
         "clean": "./clean.sh",
         "test": "./test.sh",
-        "doc": "./doc.sh -o"
+        "doc": "./doc.sh -o",
+        "publish-doc": "./publish-doc.sh"
     },
     "keywords": [],
     "author": "",
