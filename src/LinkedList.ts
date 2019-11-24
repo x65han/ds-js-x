@@ -1,7 +1,7 @@
-class Node {
+class LinkedListNode {
     value: number;
-    prev: Node | null = null;
-    next: Node | null = null;
+    prev: LinkedListNode | null = null;
+    next: LinkedListNode | null = null;
 
     constructor(value: number = 0) {
         this.value = value;
@@ -10,8 +10,8 @@ class Node {
 
 class LinkedList {
     size: number = 0
-    head: Node | null = null;
-    tail: Node | null = null;
+    head: LinkedListNode | null = null;
+    tail: LinkedListNode | null = null;
 
     constructor(inputArray?: Array<number>) {
         if (inputArray) {
@@ -38,11 +38,11 @@ class LinkedList {
 
     public pushBack(value: number): void {
         if (this.size === 0) { // empty list
-            this.head = new Node(value)
+            this.head = new LinkedListNode(value)
             this.tail = this.head
         } else { // list has at least 1 element
             let oldTail = this.tail!;
-            this.tail = new Node(value)
+            this.tail = new LinkedListNode(value)
             oldTail.next = this.tail;
             this.tail.prev = oldTail;
         }
@@ -56,7 +56,7 @@ class LinkedList {
         } else {
             this.size++
             let oldHead = this.head!
-            this.head = new Node(value)
+            this.head = new LinkedListNode(value)
             this.head.next = oldHead;
             oldHead.prev = this.head;
         }
@@ -67,7 +67,7 @@ class LinkedList {
             throw ('[Failed to remove head] LinkedList is empty')
         }
 
-        this.removeNode(this.head!)
+        this.removeLinkedListNode(this.head!)
     }
 
     public removeTail(): void {
@@ -75,14 +75,14 @@ class LinkedList {
             throw ('[Failed to remove tail] LinkedList is empty')
         }
 
-        this.removeNode(this.tail!)
+        this.removeLinkedListNode(this.tail!)
     }
 
     public remove(value: number): boolean {
         let temp = this.head
         while (temp) {
             if (temp.value === value) {
-                this.removeNode(temp)
+                this.removeLinkedListNode(temp)
                 return true
             }
             temp = temp.next
@@ -91,7 +91,7 @@ class LinkedList {
         return false
     }
 
-    private removeNode(node: Node): void {
+    private removeLinkedListNode(node: LinkedListNode): void {
         if (node == this.head) {
             let oldHead = this.head
             let newHead = this.head.next
@@ -102,7 +102,7 @@ class LinkedList {
             }
             this.head = newHead
 
-            this.cutNodeConnection(oldHead)
+            this.cutLinkedListNodeConnection(oldHead)
         } else if (node == this.tail) {
             let oldTail = this.tail;
             let newTail = this.tail.prev
@@ -112,20 +112,20 @@ class LinkedList {
                 this.tail = this.head = null
             }
 
-            this.cutNodeConnection(oldTail)
+            this.cutLinkedListNodeConnection(oldTail)
         } else {
             const prev = node.prev!
             const next = node.next!
             prev.next = next
             next.prev = prev
 
-            this.cutNodeConnection(node)
+            this.cutLinkedListNodeConnection(node)
         }
 
         this.size--
     }
 
-    private cutNodeConnection(node: Node): void {
+    private cutLinkedListNodeConnection(node: LinkedListNode): void {
         node.prev = node.next = null
     }
 }

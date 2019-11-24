@@ -1,14 +1,14 @@
 "use strict";
 exports.__esModule = true;
-var Node = (function () {
-    function Node(data, parent, rank) {
+var DisjointSetNode = (function () {
+    function DisjointSetNode(data, parent, rank) {
         if (parent === void 0) { parent = null; }
         if (rank === void 0) { rank = 0; }
         this.data = data;
         this.rank = rank;
         this.setParent(parent);
     }
-    Node.prototype.setParent = function (parent) {
+    DisjointSetNode.prototype.setParent = function (parent) {
         if (parent === void 0) { parent = null; }
         if (parent === null) {
             this.parent = this;
@@ -17,7 +17,7 @@ var Node = (function () {
             this.parent = parent;
         }
     };
-    return Node;
+    return DisjointSetNode;
 }());
 var DisjointSet = (function () {
     function DisjointSet() {
@@ -27,7 +27,7 @@ var DisjointSet = (function () {
         if (this.map.has(data)) {
             return;
         }
-        var node = new Node(data);
+        var node = new DisjointSetNode(data);
         this.map.set(data, node);
     };
     DisjointSet.prototype.union = function (data1, data2) {
@@ -39,8 +39,8 @@ var DisjointSet = (function () {
         }
         var node1 = this.map.get(data1);
         var node2 = this.map.get(data2);
-        var parent1 = this.findSetByNode(node1);
-        var parent2 = this.findSetByNode(node2);
+        var parent1 = this.findSetByDisjointSetNode(node1);
+        var parent2 = this.findSetByDisjointSetNode(node2);
         if (parent1.data === parent2.data) {
             return false;
         }
@@ -60,15 +60,15 @@ var DisjointSet = (function () {
             return null;
         }
         var node = this.map.get(data);
-        var res = this.findSetByNode(node);
+        var res = this.findSetByDisjointSetNode(node);
         return res.data;
     };
-    DisjointSet.prototype.findSetByNode = function (node) {
+    DisjointSet.prototype.findSetByDisjointSetNode = function (node) {
         var parent = node.parent;
         if (parent == node) {
             return parent;
         }
-        node.parent = this.findSetByNode(parent);
+        node.parent = this.findSetByDisjointSetNode(parent);
         return node.parent;
     };
     return DisjointSet;

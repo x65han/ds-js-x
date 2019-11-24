@@ -1,11 +1,11 @@
-class Node {
+class DisjointSetNode {
     data: number;
-    parent: Node;
+    parent: DisjointSetNode;
     rank: number;
 
     constructor(
         data: number,
-        parent: Node | null = null,
+        parent: DisjointSetNode | null = null,
         rank: number = 0
     ) {
         this.data = data;
@@ -13,7 +13,7 @@ class Node {
         this.setParent(parent)
     }
 
-    public setParent(parent: Node | null = null): void {
+    public setParent(parent: DisjointSetNode | null = null): void {
         // default parent to self
         if (parent === null) {
             this.parent = this;
@@ -24,7 +24,7 @@ class Node {
 }
 
 class DisjointSet {
-    private map: Map<number, Node> = new Map();
+    private map: Map<number, DisjointSetNode> = new Map();
 
     // Create a set with only one element
     public makeSet(data: number): void {
@@ -33,7 +33,7 @@ class DisjointSet {
             return
         }
 
-        const node: Node = new Node(data)
+        const node: DisjointSetNode = new DisjointSetNode(data)
         this.map.set(data, node)
     }
 
@@ -47,8 +47,8 @@ class DisjointSet {
         const node1 = this.map.get(data1)!
         const node2 = this.map.get(data2)!
 
-        const parent1 = this.findSetByNode(node1)
-        const parent2 = this.findSetByNode(node2)
+        const parent1 = this.findSetByDisjointSetNode(node1)
+        const parent2 = this.findSetByDisjointSetNode(node2)
 
         // If they are part of the same set, do nothing
         if (parent1.data === parent2.data) {
@@ -76,17 +76,17 @@ class DisjointSet {
 
         const node = this.map.get(data)!
 
-        const res = this.findSetByNode(node)
+        const res = this.findSetByDisjointSetNode(node)
         return res.data
     }
 
-    private findSetByNode(node: Node): Node {
+    private findSetByDisjointSetNode(node: DisjointSetNode): DisjointSetNode {
         const parent = node.parent;
         if (parent == node) {
             return parent;
         }
         // path compression
-        node.parent = this.findSetByNode(parent)
+        node.parent = this.findSetByDisjointSetNode(parent)
         return node.parent
     }
 }

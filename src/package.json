@@ -5,7 +5,9 @@
   "scripts": {
     "build": "./build.sh",
     "clean": "./clean.sh",
-    "test": "./test.sh"
+    "test": "./test.sh",
+    "doc": "./doc.sh",
+    "doc-o": "./doc.sh; open doc/index.html"
   },
   "keywords": [],
   "author": "",

@@ -1,8 +1,8 @@
-class Node {
+class BinarySearchTreeNode {
     value: number;
-    left: Node | null = null;
-    right: Node | null = null;
-    parent: Node | null = null;
+    left: BinarySearchTreeNode | null = null;
+    right: BinarySearchTreeNode | null = null;
+    parent: BinarySearchTreeNode | null = null;
 
     constructor(value: number) {
         this.value = value;
@@ -10,7 +10,7 @@ class Node {
 }
 
 class BinarySearchTree {
-    private root: Node | null = null
+    private root: BinarySearchTreeNode | null = null
     private size: number = 0;
 
     public getSize(): number {
@@ -18,8 +18,6 @@ class BinarySearchTree {
     }
 
     public inOrderTraversal(): Array<number> {
-        // const res: number[] = []
-        // const res = new Array<number>()
         const res = new Array<number>()
 
         if (this.root) {
@@ -29,7 +27,7 @@ class BinarySearchTree {
         return res
     }
 
-    private inOrderTraversalImpl(node: Node, res: Array<number>): void {
+    private inOrderTraversalImpl(node: BinarySearchTreeNode, res: Array<number>): void {
         node.left && this.inOrderTraversalImpl(node.left, res)
         res.push(node.value)
         node.right && this.inOrderTraversalImpl(node.right, res)
@@ -38,7 +36,7 @@ class BinarySearchTree {
     public add(value: number): void {
         this.size++
         if (!this.root) {
-            this.root = new Node(value)
+            this.root = new BinarySearchTreeNode(value)
         }
 
         let node = this.root
@@ -47,7 +45,7 @@ class BinarySearchTree {
                 if (node.left) {
                     node = node.left
                 } else {
-                    node.left = new Node(value)
+                    node.left = new BinarySearchTreeNode(value)
                     node.left.parent = node
                     break
                 }
@@ -55,7 +53,7 @@ class BinarySearchTree {
                 if (node.right) {
                     node = node.right
                 } else {
-                    node.right = new Node(value)
+                    node.right = new BinarySearchTreeNode(value)
                     node.right.parent = node
                     break
                 }
@@ -71,12 +69,12 @@ class BinarySearchTree {
         return this.removeImpl(this.root!, value);
     }
 
-    private removeImpl(startNode: Node, value: number): boolean {
-        if (!startNode) {
+    private removeImpl(startBinarySearchTreeNode: BinarySearchTreeNode, value: number): boolean {
+        if (!startBinarySearchTreeNode) {
             return false
         }
 
-        let node: Node | null = startNode
+        let node: BinarySearchTreeNode | null = startBinarySearchTreeNode
 
         if (value < node.value) {
             if (node.left) {

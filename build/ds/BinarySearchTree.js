@@ -1,13 +1,13 @@
 "use strict";
 exports.__esModule = true;
-var Node = (function () {
-    function Node(value) {
+var BinarySearchTreeNode = (function () {
+    function BinarySearchTreeNode(value) {
         this.left = null;
         this.right = null;
         this.parent = null;
         this.value = value;
     }
-    return Node;
+    return BinarySearchTreeNode;
 }());
 var BinarySearchTree = (function () {
     function BinarySearchTree() {
@@ -32,7 +32,7 @@ var BinarySearchTree = (function () {
     BinarySearchTree.prototype.add = function (value) {
         this.size++;
         if (!this.root) {
-            this.root = new Node(value);
+            this.root = new BinarySearchTreeNode(value);
         }
         var node = this.root;
         while (node) {
@@ -41,7 +41,7 @@ var BinarySearchTree = (function () {
                     node = node.left;
                 }
                 else {
-                    node.left = new Node(value);
+                    node.left = new BinarySearchTreeNode(value);
                     node.left.parent = node;
                     break;
                 }
@@ -51,7 +51,7 @@ var BinarySearchTree = (function () {
                     node = node.right;
                 }
                 else {
-                    node.right = new Node(value);
+                    node.right = new BinarySearchTreeNode(value);
                     node.right.parent = node;
                     break;
                 }
@@ -64,11 +64,11 @@ var BinarySearchTree = (function () {
         }
         return this.removeImpl(this.root, value);
     };
-    BinarySearchTree.prototype.removeImpl = function (startNode, value) {
-        if (!startNode) {
+    BinarySearchTree.prototype.removeImpl = function (startBinarySearchTreeNode, value) {
+        if (!startBinarySearchTreeNode) {
             return false;
         }
-        var node = startNode;
+        var node = startBinarySearchTreeNode;
         if (value < node.value) {
             if (node.left) {
                 this.removeImpl(node.left, value);
