@@ -16,6 +16,9 @@ Currently supports:
 npm i --save ds-js-x
 ```
 
+# Documentation
+[View Documentation](https://ds-js-x.herokuapp.com/)
+
 # Usage
 
 ```diff
