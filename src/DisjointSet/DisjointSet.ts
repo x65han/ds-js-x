@@ -1,5 +1,3 @@
-import * as _ from 'colors'
-
 class Node {
     data: number;
     parent: Node;

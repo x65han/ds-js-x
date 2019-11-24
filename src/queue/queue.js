@@ -1,67 +1,42 @@
-module.exports = class Queue {
-    constructor() {
+"use strict";
+exports.__esModule = true;
+var Queue = (function () {
+    function Queue(inputArray) {
         this.list = [];
-        this.size = 0;
+        if (inputArray) {
+            this.list = inputArray.slice();
+        }
     }
-
-    help() {
-        console.log(`\nDocumentation [Queue]:`.green);
-
-        console.log(`Member Functions:`.red);
-        console.log('print()'.green);
-        console.log('\tPrints and returns the queue'.yellow);
-
-        console.log('empty()'.green);
-        console.log('\tReturns true if the queue is empty'.yellow);
-
-        console.log('size()'.green);
-        console.log('\tReturns the size of the queue'.yellow);
-
-        console.log('clear()'.green);
-        console.log('\tClears the queue'.yellow);
-
-        console.log('push(val)'.green);
-        console.log('\tPush the value to the back of the queue'.yellow);
-
-        console.log('peek()'.green);
-        console.log('\tReturns the head of the queue'.yellow);
-
-        console.log('pop()'.green);
-        console.log('\tPops from the head of the queue'.yellow);
-
-        console.log(`\n`);
-    }
-
-    clear() {
+    Queue.prototype.toArray = function () {
+        return this.list.slice();
+    };
+    Queue.prototype.isEmpty = function () {
+        return this.getSize() === 0;
+    };
+    Queue.prototype.getSize = function () {
+        return this.list.length;
+    };
+    Queue.prototype.clear = function () {
         this.list = [];
-        return true;
-    }
-
-    push(value) {
+    };
+    Queue.prototype.push = function (value) {
         this.list.push(value);
-        return true;
-    }
-
-    pop() {
-        if (this.list.length > 0) {
-            return this.list.shift(); // remove head
+    };
+    Queue.prototype.peek = function () {
+        if (this.isEmpty()) {
+            return null;
         }
-        return false;
-    }
-
-    peek() {
-        if (this.list.length > 0) {
-            return this.list[0];
+        return this.list[0];
+    };
+    Queue.prototype.pop = function () {
+        if (this.isEmpty()) {
+            return null;
         }
-        return false;
-    }
-
-    print() {
-        console.log(this.list);
-        return this.list;
-    }
-
-    empty() {
-        return (this.list.length == 0);
-    }
-}
+        var res = this.list[0];
+        this.list.shift();
+        return res;
+    };
+    return Queue;
+}());
+exports["default"] = Queue;
+//# sourceMappingURL=Queue.js.map

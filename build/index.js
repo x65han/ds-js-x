@@ -1,17 +1,14 @@
 require('colors');
 
 module.exports = {
-  LinkedList: require('./ds/linked_list.js'),
-  Stack: require('./ds/stack.js'),
-  DisjointSet: require('./ds/disjoint_set.js'),
-  Queue: require('./ds/queue.js'),
-  PriorityQueue: require('./ds/priority_queue.js'),
-  BinarySearchTree: require('./ds/bst.js'),
+  LinkedList: require('./ds/LinkedList.js'),
+  Stack: require('./ds/Stack.js'),
+  DisjointSet: require('./ds/DisjointSet.js'),
+  Queue: require('./ds/Queue.js'),
+  PriorityQueue: require('./ds/PriorityQueue.js'),
+  BinarySearchTree: require('./ds/BinarySearchTree.js'),
   help: function () {
     console.log(`\n`);
-    console.log('\nImports all data structure:'.red);
-    console.log(`> let DS = require('ds-js-x');`.green);
-
     console.log('\nImports all data structure:'.red);
     console.log(`> let DS = require('ds-js-x');`.green);
 
