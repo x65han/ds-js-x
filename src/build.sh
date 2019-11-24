@@ -5,13 +5,7 @@ rm -rf ../build/ds/*.js
 tsc
 
 # Copy Data Structures
-for folder in */; do
-  if [ "$folder" != "node_modules/" ]; then 
-    cd $folder
-    cp *.js ../../build/ds
-    cd ..
-  fi
-done
+cp *.js ../build/ds
 
 # Define colors
 RED='\033[0;31m'

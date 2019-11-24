@@ -4,6 +4,7 @@
   "description": "",
   "scripts": {
     "build": "./build.sh",
+    "clean": "./clean.sh",
     "test": "./test.sh"
   },
   "keywords": [],
