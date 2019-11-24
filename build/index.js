@@ -1,8 +1,9 @@
-var colors = require('colors');
+require('colors');
 
 module.exports = {
   LinkedList: require('./ds/linked_list.js'),
   Stack: require('./ds/stack.js'),
+  DisjointSet: require('./ds/disjoint_set.js'),
   Queue: require('./ds/queue.js'),
   PriorityQueue: require('./ds/priority_queue.js'),
   BinarySearchTree: require('./ds/bst.js'),

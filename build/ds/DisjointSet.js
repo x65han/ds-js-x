@@ -74,4 +74,4 @@ var DisjointSet = (function () {
     return DisjointSet;
 }());
 exports["default"] = DisjointSet;
-//# sourceMappingURL=disjoint_set.js.map
+//# sourceMappingURL=DisjointSet.js.map

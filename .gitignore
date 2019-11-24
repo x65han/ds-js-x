@@ -1,4 +1,6 @@
 .vscode/
+node_modules/
 .DS_Store
 *.js.map
-src/disjoint_set/*.js
+src/DisjointSet/*.js
+src/LinkedList/*.js
