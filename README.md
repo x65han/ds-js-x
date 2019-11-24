@@ -10,6 +10,7 @@ Currently supports:
 - Min Heap
 - Priority Queue
 - Disjoint Set
+- Segment Tree
 
 # Installation
 ```sh
