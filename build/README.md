@@ -1,5 +1,7 @@
 # ds-js-x
 
+[View Documentation](https://ds-js-x.herokuapp.com/)
+
 JavaScript Data Structure Library for leetcoding or general use.
 Currently supports:
 - LinkedList

@@ -1,6 +1,7 @@
 # ds-js-x
 
 [View Documentation](https://ds-js-x.herokuapp.com/)
+
 JavaScript Data Structure Library for leetcoding or general use.
 Currently supports:
 - LinkedList
@@ -25,34 +26,28 @@ npm i --save ds-js-x
 ```diff
 - Imports all data structure:
 + let DS = require('ds-js-x');
++ DS.help();
 
 -Imports BinarySearchTree:
 + let tree = new DS.BinarySearchTree();
-+ tree.help();
 
 -Imports LinkedList:
 + let list = new DS.LinkedList();
-+ list.help();
 
 - Imports Stack:
 + let stack = new DS.Stack();
-+ stack.help();
 
 - Imports Queue:
 + let queue = new DS.Queue();
-+ queue.help();
 
 - Imports Max Heap:
 + let heap = new DS.PriorityQueue();
-+ heap.help();
 
 - Imports Min Heap:
 + let heap = new DS.PriorityQueue((a, b) => a - b < 0);
-+ heap.help();
 
 - Imports Priority Queue:
 + let queue = new DS.PriorityQueue(comparator);
-+ queue.help();
 ```
 
 # Development

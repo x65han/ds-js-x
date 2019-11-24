@@ -1,6 +1,6 @@
 {
   "name": "ds-js-x",
-  "version": "1.0.8",
+  "version": "1.0.10",
   "description": "JavaScript Data Structure by Johnson Han",
   "main": "index.js",
   "scripts": {

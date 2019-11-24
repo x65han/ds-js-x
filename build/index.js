@@ -8,14 +8,14 @@ const PriorityQueue = require('./ds/PriorityQueue.js');
 const SegmentTree = require('./ds/SegmentTree.js');
 const BinarySearchTree = require('./ds/BinarySearchTree.js');
 
-const exports = {
-    LinkedList,
-    Stack,
-    DisjointSet,
-    Queue,
-    PriorityQueue,
-    SegmentTree,
-    BinarySearchTree,
+module.exports = {
+    LinkedList: LinkedList.default,
+    Stack: Stack.default,
+    DisjointSet: DisjointSet.default,
+    Queue: Queue.default,
+    PriorityQueue: PriorityQueue.default,
+    SegmentTree: SegmentTree.default,
+    BinarySearchTree: BinarySearchTree.default,
     help: function () {
         console.log(`\n`);
         console.log('\nImports all data structure:'.red);
@@ -52,5 +52,3 @@ const exports = {
         console.log(`\n`);
     }
 }
-
-module.exports = exports
