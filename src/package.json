@@ -1,24 +1,23 @@
 {
-  "name": "src",
-  "version": "1.0.0",
-  "description": "",
-  "scripts": {
-    "build": "./build.sh",
-    "clean": "./clean.sh",
-    "test": "./test.sh",
-    "doc": "./doc.sh",
-    "doc-o": "./doc.sh; open doc/index.html"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "colors": "^1.4.0"
-  },
-  "devDependencies": {
-    "@types/color": "^3.0.0",
-    "@types/node": "^12.12.12",
-    "jsdoc": "^3.6.3",
-    "typedoc": "^0.15.3"
-  }
+    "name": "src",
+    "version": "1.0.0",
+    "description": "",
+    "scripts": {
+        "build": "./build.sh",
+        "clean": "./clean.sh",
+        "test": "./test.sh",
+        "doc": "./doc.sh -o"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "colors": "^1.4.0"
+    },
+    "devDependencies": {
+        "@types/color": "^3.0.0",
+        "@types/node": "^12.12.12",
+        "jsdoc": "^3.6.3",
+        "typedoc": "^0.15.3"
+    }
 }

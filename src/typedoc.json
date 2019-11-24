@@ -1,9 +1,8 @@
 module.exports = {
-    out: './doc',
+    out: './docs',
     mode: 'file',
-    include: '*.ts',
+    include: '../src/*.ts',
     exclude: [
-        'tests/*.ts'
+        '../src/tests/*.ts'
     ],
 }
-

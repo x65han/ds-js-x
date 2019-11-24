@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Queue | src</title>
+	<title>PriorityQueue | src</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -56,13 +56,10 @@
 					<a href="../globals.html">Globals</a>
 				</li>
 				<li>
-					<a href="../modules/_queue_.html">&quot;Queue&quot;</a>
-				</li>
-				<li>
-					<a href="_queue_.queue.html">Queue</a>
+					<a href="priorityqueue.html">PriorityQueue</a>
 				</li>
 			</ul>
-			<h1>Class Queue</h1>
+			<h1>Class PriorityQueue</h1>
 		</div>
 	</div>
 </header>
@@ -73,7 +70,7 @@
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
 					<li>
-						<span class="target">Queue</span>
+						<span class="target">PriorityQueue</span>
 					</li>
 				</ul>
 			</section>
@@ -84,25 +81,28 @@
 						<section class="tsd-index-section ">
 							<h3>Constructors</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-constructor tsd-parent-kind-class"><a href="_queue_.queue.html#constructor" class="tsd-kind-icon">constructor</a></li>
+								<li class="tsd-kind-constructor tsd-parent-kind-class"><a href="priorityqueue.html#constructor" class="tsd-kind-icon">constructor</a></li>
 							</ul>
 						</section>
 						<section class="tsd-index-section tsd-is-private tsd-is-private-protected">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><a href="_queue_.queue.html#list" class="tsd-kind-icon">list</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><a href="priorityqueue.html#compare" class="tsd-kind-icon">compare</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><a href="priorityqueue.html#heap" class="tsd-kind-icon">heap</a></li>
 							</ul>
 						</section>
 						<section class="tsd-index-section ">
 							<h3>Methods</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_queue_.queue.html#clear" class="tsd-kind-icon">clear</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_queue_.queue.html#getsize" class="tsd-kind-icon">get<wbr>Size</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_queue_.queue.html#isempty" class="tsd-kind-icon">is<wbr>Empty</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_queue_.queue.html#peek" class="tsd-kind-icon">peek</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_queue_.queue.html#pop" class="tsd-kind-icon">pop</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_queue_.queue.html#push" class="tsd-kind-icon">push</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_queue_.queue.html#toarray" class="tsd-kind-icon">to<wbr>Array</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="priorityqueue.html#buildheap" class="tsd-kind-icon">build<wbr>Heap</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="priorityqueue.html#clear" class="tsd-kind-icon">clear</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="priorityqueue.html#getsize" class="tsd-kind-icon">get<wbr>Size</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-private"><a href="priorityqueue.html#heapify" class="tsd-kind-icon">heapify</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="priorityqueue.html#isempty" class="tsd-kind-icon">is<wbr>Empty</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="priorityqueue.html#peek" class="tsd-kind-icon">peek</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="priorityqueue.html#pop" class="tsd-kind-icon">pop</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="priorityqueue.html#push" class="tsd-kind-icon">push</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="priorityqueue.html#toarray" class="tsd-kind-icon">to<wbr>Array</a></li>
 							</ul>
 						</section>
 					</div>
@@ -114,22 +114,43 @@
 					<a name="constructor" class="tsd-anchor"></a>
 					<h3>constructor</h3>
 					<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">new <wbr>Queue<span class="tsd-signature-symbol">(</span>inputArray<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_queue_.queue.html" class="tsd-signature-type">Queue</a></li>
+						<li class="tsd-signature tsd-kind-icon">new <wbr>Priority<wbr>Queue<span class="tsd-signature-symbol">(</span>comparatorFunction<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">function</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="priorityqueue.html" class="tsd-signature-type">PriorityQueue</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/x65han/ds-js-x/blob/518efc3/src/Queue.ts#L2">Queue.ts:2</a></li>
+									<li>Defined in <a href="https://github.com/x65han/ds-js-x/blob/ff952b5/src/PriorityQueue.ts#L3">PriorityQueue.ts:3</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> inputArray: <span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">&gt;</span></h5>
+									<h5>comparatorFunction: <span class="tsd-signature-type">function</span></h5>
+									<ul class="tsd-parameters">
+										<li class="tsd-parameter-siganture">
+											<ul class="tsd-signatures tsd-kind-type-literal">
+												<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>a<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span>, b<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+											</ul>
+											<ul class="tsd-descriptions">
+												<li class="tsd-description">
+													<h4 class="tsd-parameters-title">Parameters</h4>
+													<ul class="tsd-parameters">
+														<li>
+															<h5>a: <span class="tsd-signature-type">any</span></h5>
+														</li>
+														<li>
+															<h5>b: <span class="tsd-signature-type">any</span></h5>
+														</li>
+													</ul>
+													<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+												</li>
+											</ul>
+										</li>
+									</ul>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <a href="_queue_.queue.html" class="tsd-signature-type">Queue</a></h4>
+							<h4 class="tsd-returns-title">Returns <a href="priorityqueue.html" class="tsd-signature-type">PriorityQueue</a></h4>
 						</li>
 					</ul>
 				</section>
@@ -137,18 +158,69 @@
 			<section class="tsd-panel-group tsd-member-group tsd-is-private tsd-is-private-protected">
 				<h2>Properties</h2>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-private">
-					<a name="list" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagPrivate">Private</span> list</h3>
-					<div class="tsd-signature tsd-kind-icon">list<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> =&nbsp;[]</span></div>
+					<a name="compare" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagPrivate">Private</span> compare</h3>
+					<div class="tsd-signature tsd-kind-icon">compare<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">function</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/x65han/ds-js-x/blob/518efc3/src/Queue.ts#L2">Queue.ts:2</a></li>
+							<li>Defined in <a href="https://github.com/x65han/ds-js-x/blob/ff952b5/src/PriorityQueue.ts#L2">PriorityQueue.ts:2</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-type-declaration">
+						<h4>Type declaration</h4>
+						<ul class="tsd-parameters">
+							<li class="tsd-parameter-siganture">
+								<ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-property">
+									<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>a<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span>, b<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+								</ul>
+								<ul class="tsd-descriptions">
+									<li class="tsd-description">
+										<h4 class="tsd-parameters-title">Parameters</h4>
+										<ul class="tsd-parameters">
+											<li>
+												<h5>a: <span class="tsd-signature-type">any</span></h5>
+											</li>
+											<li>
+												<h5>b: <span class="tsd-signature-type">any</span></h5>
+											</li>
+										</ul>
+										<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-private">
+					<a name="heap" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagPrivate">Private</span> heap</h3>
+					<div class="tsd-signature tsd-kind-icon">heap<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/x65han/ds-js-x/blob/ff952b5/src/PriorityQueue.ts#L3">PriorityQueue.ts:3</a></li>
 						</ul>
 					</aside>
 				</section>
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Methods</h2>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="buildheap" class="tsd-anchor"></a>
+					<h3>build<wbr>Heap</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">build<wbr>Heap<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/x65han/ds-js-x/blob/ff952b5/src/PriorityQueue.ts#L26">PriorityQueue.ts:26</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
 					<a name="clear" class="tsd-anchor"></a>
 					<h3>clear</h3>
@@ -159,7 +231,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/x65han/ds-js-x/blob/518efc3/src/Queue.ts#L22">Queue.ts:22</a></li>
+									<li>Defined in <a href="https://github.com/x65han/ds-js-x/blob/ff952b5/src/PriorityQueue.ts#L14">PriorityQueue.ts:14</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -176,10 +248,33 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/x65han/ds-js-x/blob/518efc3/src/Queue.ts#L18">Queue.ts:18</a></li>
+									<li>Defined in <a href="https://github.com/x65han/ds-js-x/blob/ff952b5/src/PriorityQueue.ts#L22">PriorityQueue.ts:22</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-private">
+					<a name="heapify" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagPrivate">Private</span> heapify</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-private">
+						<li class="tsd-signature tsd-kind-icon">heapify<span class="tsd-signature-symbol">(</span>index<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/x65han/ds-js-x/blob/ff952b5/src/PriorityQueue.ts#L75">PriorityQueue.ts:75</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>index: <span class="tsd-signature-type">number</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -193,7 +288,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/x65han/ds-js-x/blob/518efc3/src/Queue.ts#L14">Queue.ts:14</a></li>
+									<li>Defined in <a href="https://github.com/x65han/ds-js-x/blob/ff952b5/src/PriorityQueue.ts#L18">PriorityQueue.ts:18</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
@@ -204,16 +299,16 @@
 					<a name="peek" class="tsd-anchor"></a>
 					<h3>peek</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">peek<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">null</span></li>
+						<li class="tsd-signature tsd-kind-icon">peek<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">null</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/x65han/ds-js-x/blob/518efc3/src/Queue.ts#L30">Queue.ts:30</a></li>
+									<li>Defined in <a href="https://github.com/x65han/ds-js-x/blob/ff952b5/src/PriorityQueue.ts#L51">PriorityQueue.ts:51</a></li>
 								</ul>
 							</aside>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span>
 								<span class="tsd-signature-symbol"> | </span>
 								<span class="tsd-signature-type">null</span>
 							</h4>
@@ -224,16 +319,16 @@
 					<a name="pop" class="tsd-anchor"></a>
 					<h3>pop</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">pop<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">null</span></li>
+						<li class="tsd-signature tsd-kind-icon">pop<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">null</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/x65han/ds-js-x/blob/518efc3/src/Queue.ts#L38">Queue.ts:38</a></li>
+									<li>Defined in <a href="https://github.com/x65han/ds-js-x/blob/ff952b5/src/PriorityQueue.ts#L59">PriorityQueue.ts:59</a></li>
 								</ul>
 							</aside>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span>
 								<span class="tsd-signature-symbol"> | </span>
 								<span class="tsd-signature-type">null</span>
 							</h4>
@@ -244,19 +339,19 @@
 					<a name="push" class="tsd-anchor"></a>
 					<h3>push</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">push<span class="tsd-signature-symbol">(</span>value<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+						<li class="tsd-signature tsd-kind-icon">push<span class="tsd-signature-symbol">(</span>value<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/x65han/ds-js-x/blob/518efc3/src/Queue.ts#L26">Queue.ts:26</a></li>
+									<li>Defined in <a href="https://github.com/x65han/ds-js-x/blob/ff952b5/src/PriorityQueue.ts#L34">PriorityQueue.ts:34</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>value: <span class="tsd-signature-type">number</span></h5>
+									<h5>value: <span class="tsd-signature-type">any</span></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -267,16 +362,16 @@
 					<a name="toarray" class="tsd-anchor"></a>
 					<h3>to<wbr>Array</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">to<wbr>Array<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">to<wbr>Array<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/x65han/ds-js-x/blob/518efc3/src/Queue.ts#L10">Queue.ts:10</a></li>
+									<li>Defined in <a href="https://github.com/x65han/ds-js-x/blob/ff952b5/src/PriorityQueue.ts#L10">PriorityQueue.ts:10</a></li>
 								</ul>
 							</aside>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">&gt;</span></h4>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -288,91 +383,82 @@
 					<li class="globals  ">
 						<a href="../globals.html"><em>Globals</em></a>
 					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/_binarysearchtree_.html">&quot;<wbr>Binary<wbr>Search<wbr>Tree&quot;</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/_disjointset_.html">&quot;<wbr>Disjoint<wbr>Set&quot;</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/_linkedlist_.html">&quot;<wbr>Linked<wbr>List&quot;</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/_priorityqueue_.html">&quot;<wbr>Priority<wbr>Queue&quot;</a>
-					</li>
-					<li class="current tsd-kind-external-module">
-						<a href="../modules/_queue_.html">&quot;<wbr>Queue&quot;</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/_segmenttree_.html">&quot;<wbr>Segment<wbr>Tree&quot;</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/_stack_.html">&quot;<wbr>Stack&quot;</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/_tests_test_binarysearchtree_1_.html">&quot;tests/<wbr>Test-<wbr><wbr>Binary<wbr>Search<wbr>Tree-<wbr>1&quot;</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/_tests_test_disjointset_1_.html">&quot;tests/<wbr>Test-<wbr><wbr>Disjoint<wbr>Set-<wbr>1&quot;</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/_tests_test_linkedlist_1_.html">&quot;tests/<wbr>Test-<wbr><wbr>Linked<wbr>List-<wbr>1&quot;</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/_tests_test_priorityqueue_1_.html">&quot;tests/<wbr>Test-<wbr><wbr>Priority<wbr>Queue-<wbr>1&quot;</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/_tests_test_priorityqueue_2_.html">&quot;tests/<wbr>Test-<wbr><wbr>Priority<wbr>Queue-<wbr>2&quot;</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/_tests_test_queue_1_.html">&quot;tests/<wbr>Test-<wbr><wbr>Queue-<wbr>1&quot;</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/_tests_test_segmenttree_1_.html">&quot;tests/<wbr>Test-<wbr><wbr>Segment<wbr>Tree-<wbr>1&quot;</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/_tests_test_stack_1_.html">&quot;tests/<wbr>Test-<wbr><wbr>Stack-<wbr>1&quot;</a>
-					</li>
 				</ul>
 			</nav>
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
+					<li class=" tsd-kind-class">
+						<a href="binarysearchtree.html" class="tsd-kind-icon">Binary<wbr>Search<wbr>Tree</a>
+					</li>
+					<li class=" tsd-kind-class tsd-is-not-exported">
+						<a href="binarysearchtreenode.html" class="tsd-kind-icon">Binary<wbr>Search<wbr>Tree<wbr>Node</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="disjointset.html" class="tsd-kind-icon">Disjoint<wbr>Set</a>
+					</li>
+					<li class=" tsd-kind-class tsd-is-not-exported">
+						<a href="disjointsetnode.html" class="tsd-kind-icon">Disjoint<wbr>Set<wbr>Node</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="linkedlist.html" class="tsd-kind-icon">Linked<wbr>List</a>
+					</li>
+					<li class=" tsd-kind-class tsd-is-not-exported">
+						<a href="linkedlistnode.html" class="tsd-kind-icon">Linked<wbr>List<wbr>Node</a>
+					</li>
 				</ul>
 				<ul class="current">
-					<li class="current tsd-kind-class tsd-parent-kind-external-module">
-						<a href="_queue_.queue.html" class="tsd-kind-icon">Queue</a>
+					<li class="current tsd-kind-class">
+						<a href="priorityqueue.html" class="tsd-kind-icon">Priority<wbr>Queue</a>
 						<ul>
 							<li class=" tsd-kind-constructor tsd-parent-kind-class">
-								<a href="_queue_.queue.html#constructor" class="tsd-kind-icon">constructor</a>
+								<a href="priorityqueue.html#constructor" class="tsd-kind-icon">constructor</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-private">
-								<a href="_queue_.queue.html#list" class="tsd-kind-icon">list</a>
+								<a href="priorityqueue.html#compare" class="tsd-kind-icon">compare</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-private">
+								<a href="priorityqueue.html#heap" class="tsd-kind-icon">heap</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
-								<a href="_queue_.queue.html#clear" class="tsd-kind-icon">clear</a>
+								<a href="priorityqueue.html#buildheap" class="tsd-kind-icon">build<wbr>Heap</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
-								<a href="_queue_.queue.html#getsize" class="tsd-kind-icon">get<wbr>Size</a>
+								<a href="priorityqueue.html#clear" class="tsd-kind-icon">clear</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
-								<a href="_queue_.queue.html#isempty" class="tsd-kind-icon">is<wbr>Empty</a>
+								<a href="priorityqueue.html#getsize" class="tsd-kind-icon">get<wbr>Size</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-private">
+								<a href="priorityqueue.html#heapify" class="tsd-kind-icon">heapify</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
-								<a href="_queue_.queue.html#peek" class="tsd-kind-icon">peek</a>
+								<a href="priorityqueue.html#isempty" class="tsd-kind-icon">is<wbr>Empty</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
-								<a href="_queue_.queue.html#pop" class="tsd-kind-icon">pop</a>
+								<a href="priorityqueue.html#peek" class="tsd-kind-icon">peek</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
-								<a href="_queue_.queue.html#push" class="tsd-kind-icon">push</a>
+								<a href="priorityqueue.html#pop" class="tsd-kind-icon">pop</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
-								<a href="_queue_.queue.html#toarray" class="tsd-kind-icon">to<wbr>Array</a>
+								<a href="priorityqueue.html#push" class="tsd-kind-icon">push</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="priorityqueue.html#toarray" class="tsd-kind-icon">to<wbr>Array</a>
 							</li>
 						</ul>
 					</li>
 				</ul>
 				<ul class="after-current">
+					<li class=" tsd-kind-class">
+						<a href="queue.html" class="tsd-kind-icon">Queue</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="segmenttree.html" class="tsd-kind-icon">Segment<wbr>Tree</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="stack.html" class="tsd-kind-icon">Stack</a>
+					</li>
 				</ul>
 			</nav>
 		</div>
