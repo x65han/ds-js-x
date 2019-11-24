@@ -1,15 +1,16 @@
 # Remove old build Files
-rm ../build/ds/*.js
+rm -rf ../build/ds/*.js
 
 # Compile ts -> js
 tsc
 
 # Copy Data Structures
 for folder in */; do
-  # TODO skip node_modules/ folder
-  cd $folder
-  cp *.js ../../build/ds
-  cd ..
+  if [ "$folder" != "node_modules/" ]; then 
+    cd $folder
+    cp *.js ../../build/ds
+    cd ..
+  fi
 done
 
 # Define colors

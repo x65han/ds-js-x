@@ -1,13 +1,12 @@
 # ds-js-x
 
-JavaScript Data Structure Library
+JavaScript Data Structure Library for leetcoding or general use.
 Currently supports:
 - LinkedList
 - Stack
 - Queue
 - Binary Search Tree
-- Max Heap
-- Min Heap
+- Heap (Min & Max)
 - Priority Queue
 - Disjoint Set
 - Segment Tree
@@ -53,7 +52,6 @@ npm i --save ds-js-x
 ```
 
 # Development
-
 - `src` folder contains the implementation details
     - `npm run build` to produce build/ folder
     - `npm run test` to run all testcases

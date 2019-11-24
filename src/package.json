@@ -9,9 +9,12 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "dependencies": {},
+  "dependencies": {
+    "colors": "^1.4.0"
+  },
   "devDependencies": {
     "@types/color": "^3.0.0",
-    "@types/node": "^12.12.12"
+    "@types/node": "^12.12.12",
+    "jsdoc": "^3.6.3"
   }
 }
