@@ -2,16 +2,9 @@
     "compilerOptions": {
         "module": "commonjs",
         "noImplicitAny": true,
-        "noImplicitReturns": true,
         "removeComments": true,
-        "strictNullChecks": true,
         "preserveConstEnums": true,
-        "sourceMap": true,
-        "lib": [
-            "es2015",
-            "es2016",
-            "dom"
-        ]
+        "sourceMap": true
     },
     "include": [
         "**/*.ts"

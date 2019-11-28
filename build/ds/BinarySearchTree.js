@@ -87,7 +87,7 @@ var BinarySearchTree = (function () {
         }
         else {
             if (!node.left || !node.right) {
-                node = (node.left) ? node.left : node.right;
+                node = node.left ? node.left : node.right;
             }
             else {
                 var run = node.right;

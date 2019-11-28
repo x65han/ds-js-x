@@ -62,12 +62,10 @@ var PriorityQueue = (function () {
         var leftIndex = 2 * index + 1;
         var rightIndex = leftIndex + 1;
         var largest = index;
-        if (leftIndex < this.getSize() &&
-            this.compare(this.heap[leftIndex], this.heap[index])) {
+        if (leftIndex < this.getSize() && this.compare(this.heap[leftIndex], this.heap[index])) {
             largest = leftIndex;
         }
-        if (rightIndex < this.getSize() &&
-            this.compare(this.heap[rightIndex], this.heap[largest])) {
+        if (rightIndex < this.getSize() && this.compare(this.heap[rightIndex], this.heap[largest])) {
             largest = rightIndex;
         }
         if (largest !== index) {

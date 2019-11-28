@@ -60,13 +60,13 @@ var LinkedList = (function () {
     };
     LinkedList.prototype.removeHead = function () {
         if (this.size === 0) {
-            throw ('[Failed to remove head] LinkedList is empty');
+            throw '[Failed to remove head] LinkedList is empty';
         }
         this.removeLinkedListNode(this.head);
     };
     LinkedList.prototype.removeTail = function () {
         if (this.size === 0) {
-            throw ('[Failed to remove tail] LinkedList is empty');
+            throw '[Failed to remove tail] LinkedList is empty';
         }
         this.removeLinkedListNode(this.tail);
     };

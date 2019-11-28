@@ -32,10 +32,10 @@ var DisjointSet = (function () {
     };
     DisjointSet.prototype.union = function (data1, data2) {
         if (this.map.has(data1) === false) {
-            throw ('[DisjointSet][union] failed. data1 is not part of any set.');
+            throw '[DisjointSet][union] failed. data1 is not part of any set.';
         }
         else if (this.map.has(data2) === false) {
-            throw ('[DisjointSet][union] failed. data2 is not part of any set.');
+            throw '[DisjointSet][union] failed. data2 is not part of any set.';
         }
         var node1 = this.map.get(data1);
         var node2 = this.map.get(data2);
@@ -47,7 +47,7 @@ var DisjointSet = (function () {
         var rank1 = parent1.rank;
         var rank2 = parent2.rank;
         if (rank1 >= rank2) {
-            parent1.rank = (rank1 === rank2) ? rank1 + 1 : rank1;
+            parent1.rank = rank1 === rank2 ? rank1 + 1 : rank1;
             parent2.parent = parent1;
         }
         else {
