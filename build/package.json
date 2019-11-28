@@ -1,6 +1,6 @@
 {
   "name": "ds-js-x",
-  "version": "1.0.14",
+  "version": "1.0.15",
   "description": "JavaScript Data Structure by Johnson Han",
   "main": "index.js",
   "scripts": {
@@ -13,7 +13,9 @@
     "Stack",
     "Queue",
     "Binary Search Tree",
-    "Priority Queue"
+    "Priority Queue",
+    "Segment Tree",
+    "Range Min Query"
   ],
   "repository": {
     "type": "git",

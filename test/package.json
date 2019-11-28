@@ -10,6 +10,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "ds-js-x": "^1.0.14"
+    "ds-js-x": "^1.0.15"
   }
 }
