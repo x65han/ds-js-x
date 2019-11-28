@@ -24,3 +24,5 @@ const minHeap = new DS.PriorityQueue((a, b) => a - b < 0);
 // Imports Priority Queue:
 const customComparator = (a, b) => a - b > 0;
 const maxHeap = new DS.PriorityQueue(comparator);
+
+console.log('\x1b[32m%s\x1b[0m', 'Passed!');
