@@ -1,5 +1,3 @@
-class SegmentTree {
-    
-}
+class SegmentTree {}
 
-export default SegmentTree
+export default SegmentTree;

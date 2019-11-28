@@ -18,9 +18,9 @@ const queue = new DS.Queue();
 const heap = new DS.PriorityQueue();
 
 // Imports Min Heap:
-const comparator = (a, b) => a - b < 0
+const comparator = (a, b) => a - b < 0;
 const minHeap = new DS.PriorityQueue((a, b) => a - b < 0);
 
 // Imports Priority Queue:
-const customComparator = (a, b) => a - b > 0
+const customComparator = (a, b) => a - b > 0;
 const maxHeap = new DS.PriorityQueue(comparator);

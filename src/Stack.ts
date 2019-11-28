@@ -1,48 +1,48 @@
 class Stack {
-    private list: Array<number> = [];
+	private list: Array<number> = [];
 
-    constructor(inputArray?: Array<number>) {
-        if (inputArray) {
-            this.list = inputArray.slice()
-        }
-    }
+	constructor(inputArray?: Array<number>) {
+		if (inputArray) {
+			this.list = inputArray.slice();
+		}
+	}
 
-    public toArray(): Array<number> {
-        return this.list.slice()
-    }
+	public toArray(): Array<number> {
+		return this.list.slice();
+	}
 
-    public isEmpty(): boolean {
-        return this.getSize() === 0
-    }
+	public isEmpty(): boolean {
+		return this.getSize() === 0;
+	}
 
-    public getSize(): number {
-        return this.list.length
-    }
+	public getSize(): number {
+		return this.list.length;
+	}
 
-    public clear(): void {
-        this.list = []
-    }
+	public clear(): void {
+		this.list = [];
+	}
 
-    public push(value: number): void {
-        this.list.push(value)
-    }
+	public push(value: number): void {
+		this.list.push(value);
+	}
 
-    public peek(): number | null {
-        if (this.isEmpty()) {
-            return null
-        }
+	public peek(): number | null {
+		if (this.isEmpty()) {
+			return null;
+		}
 
-        const length = this.getSize();
-        return this.list[length - 1]
-    }
+		const length = this.getSize();
+		return this.list[length - 1];
+	}
 
-    public pop(): number | null {
-        if (this.isEmpty()) {
-            return null
-        }
+	public pop(): number | null {
+		if (this.isEmpty()) {
+			return null;
+		}
 
-        return this.list.pop()!
-    }
+		return this.list.pop()!;
+	}
 }
 
-export default Stack
+export default Stack;

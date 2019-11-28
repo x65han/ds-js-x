@@ -12,9 +12,7 @@
     "keywords": [],
     "author": "",
     "license": "ISC",
-    "dependencies": {
-        "colors": "^1.4.0"
-    },
+    "dependencies": {},
     "devDependencies": {
         "@types/color": "^3.0.0",
         "@types/node": "^12.12.12",
